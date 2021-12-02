@@ -16,7 +16,8 @@ nav {
 }
 #doubledownicon {
     position:relative;
-    left:87%;
+    float: right;
+    /* left:87%; */
     top: 25px;
     color: red;
 }

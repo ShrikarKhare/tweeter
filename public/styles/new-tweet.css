@@ -1,0 +1,27 @@
+form {
+    border-bottom: black 2px solid;
+}
+#tweet-text {
+    display: flex;
+    width: 90%;
+    background-color: inherit;
+    color: black;
+    border: none;
+    resize: none;
+    font-family: 'Bungee', 'cursive';
+}
+button {
+    position:relative;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #4056A1;
+    color: #fff;  
+    font-family: 'Bungee', 'cursive';
+}
+output.counter {
+    display: flex;
+    position: relative;
+    float:right;
+    margin:30px;
+    text-align: right;
+}

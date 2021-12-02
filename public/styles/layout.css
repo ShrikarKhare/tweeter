@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  user-select: none;
 }
 
 /*
@@ -26,6 +27,14 @@ body {
  */
 
  nav {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', 'cursive';
   font-size: xx-large;
+ }
+ main {
+   width:90%;
+   align-self: center;
+   margin: 0 auto;
+   background-color: #f4f1ec;
+   font-family: 'Bungee', 'cursive';
+   /* font-family: 'Source Sans Pro', sans-serif; */
  }
