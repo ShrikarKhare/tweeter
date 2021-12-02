@@ -24,4 +24,5 @@ output.counter {
     float:right;
     margin:30px;
     text-align: right;
+    font-family: 'Bungee', 'cursive';
 }

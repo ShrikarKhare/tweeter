@@ -26,15 +26,57 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- nav {
+nav {
   font-family: 'Bungee', 'cursive';
   font-size: xx-large;
- }
- main {
-   width:90%;
-   align-self: center;
-   margin: 0 auto;
-   background-color: #f4f1ec;
-   font-family: 'Bungee', 'cursive';
-   /* font-family: 'Source Sans Pro', sans-serif; */
- }
+}
+main {
+  width:90%;
+  align-self: center;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+article {
+  border: 2px solid black;
+
+}
+article header {
+  background-color: #f4f1ec;
+}
+header i {
+  position: relative;
+  float: left;
+  margin: 15px;
+}
+text {
+  position: relative;
+  float: left;
+  font-size: 1.5em;
+  top: 200px;
+}
+header #tweetername {
+  position: relative;
+  float: left;
+  font-size: 1.5em;
+  margin-top: 70px;
+}
+header #tweeterhandle {
+  position: relative;
+  float: right;
+  margin-right: 40px;
+  margin-top: 75px;
+  opacity: 0.4;
+}
+#timesincetweet {
+  width: 200px;
+  height: 200px;
+}
+/* article .fa-flag .fa-heart .fa-retweet {
+  position: relative;
+  left: 90%;
+  float: right !important;
+} */
+#retweeticon:hover {
+  box-shadow: gold;
+}
