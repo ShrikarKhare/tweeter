@@ -1,5 +1,5 @@
 form {
-    height: 200px;
+    height: 150px;
     border-bottom: black 2px solid;
 }
 #newtweet-text {
@@ -15,22 +15,21 @@ form {
 }
 textarea {
     position: relative;
-    transform: translateY(-400px);
+    transform: translateY(-430px);
 }
 button {
     position:relative;
-    transform: translateY(-200px);
     border-radius: 5px;
     margin: 20px;
     background-color: #4056A1;
     color: #fff;  
     font-family: 'Bungee', 'cursive';
+    transform: translateY(-250px);
 }
 output.counter {
     position: relative;
     float:right;
-    transform: translateY(-230px);
-    top: 20px;
+    transform: translateY(-255px);
     margin:30px;
     text-align: right;
     font-family: 'Bungee', 'cursive';
