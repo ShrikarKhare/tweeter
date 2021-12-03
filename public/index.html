@@ -22,11 +22,12 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--timeago library-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--timeago.js library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
     
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
   
   <body>
@@ -52,7 +53,7 @@
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
         <form>
-          <textarea  name="text" id="tweet-text" placeholder = "What are you humming about?"></textarea>
+          <textarea  name="text" id="newtweet-text" placeholder = "What are you humming about?"></textarea>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
         <div>
@@ -62,21 +63,20 @@
       <article class = tweet-container>
         <header>
           <i class="fas fa-user-circle fa-6x"></i>
-          <p id = 'tweetername'>Fname</p> 
+          <p id = 'tweetername'>coolguy</p> 
           <p id = 'tweeterhandle'>@Iamcoolguy</p>
-          <text> This is my great tweet </text>
-        </header>
-        <footer>
-          <span id = 'timesincetweet'></span>
-          <i id = 'flagicon' class="fas fa-flag"></i>
-          <i id = 'retweeticon' class="fas fa-retweet"></i>
-          <i id = 'hearticon' class="fas fa-heart"></i>
-        </footer>
+          <text class = 'tweet-text'> This is my great tweet </text>
+        </span>
+        <span id = 'timesincetweet'></span>
+        <span id = 'icons'>
+          <i id = 'flagicon' class="fas fa-flag"> </i>
+          <i id = 'retweeticon' class="fas fa-retweet"> </i>
+          <i id = 'hearticon' class="fas fa-heart"> </i>
+      </header>
       </article>
     </main>
   </body>
 </html>
-
-  <script>  
-    document.getElementbyId('#timesincetweet').innerHTML = 2021-12-02;
-  </script>
+<script>
+  document.getElementById('timesincetweet').innerHTML = `${timeago.format('2021-06-09')} `
+</script>

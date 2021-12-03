@@ -1,4 +1,6 @@
 header {
+    position: relative;
+    top: 120px;
     height: 400px;
     width: 100%;
     justify-content: center;

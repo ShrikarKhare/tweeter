@@ -1,4 +1,6 @@
 nav {
+    position: fixed;
+    top:0px;
     height: 120px;
     width: 100%;
     background-color: #4056A1;
@@ -17,6 +19,7 @@ nav {
 }
 #doubledownicon {
     position:relative;
+    cursor: pointer;
     float: right;
     transform: translateX(120px);
     top: 45px;

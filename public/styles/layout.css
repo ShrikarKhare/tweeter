@@ -13,11 +13,11 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  height:100%;
   font-family: 'Source Sans Pro', sans-serif;
   user-select: none;
 }
@@ -31,37 +31,51 @@ nav {
   font-size: xx-large;
 }
 main {
+  position: relative;
+  top: 520px;
+  overflow:auto;
   width:90%;
-  align-self: center;
   margin: 0 auto;
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', sans-serif;
 }
 article {
   border: 2px solid black;
+  height: 600px;
 
 }
+
 article header {
   background-color: #f4f1ec;
+}
+article:hover {
+  box-shadow: 5px 10px #888888;
 }
 header i {
   position: relative;
   float: left;
   margin: 15px;
 }
+
 text {
   position: relative;
-  float: left;
   font-size: 1.5em;
-  top: 200px;
+  float: left ;
+  margin: 1.2em;
+  padding-bottom: 1.2em;
+  text-align: left;
+  width: 95%;
+  border-bottom: 5px solid black;
+  top: 50px;
 }
-header #tweetername {
+
+#tweetername {
   position: relative;
   float: left;
   font-size: 1.5em;
   margin-top: 70px;
 }
-header #tweeterhandle {
+#tweeterhandle {
   position: relative;
   float: right;
   margin-right: 40px;
@@ -69,14 +83,25 @@ header #tweeterhandle {
   opacity: 0.4;
 }
 #timesincetweet {
-  width: 200px;
-  height: 200px;
-}
-/* article .fa-flag .fa-heart .fa-retweet {
   position: relative;
-  left: 90%;
-  float: right !important;
-} */
+  float: left;
+  margin-left: 2.5em;
+  margin-top: 1em;
+}
+#icons {
+  float: right;
+  margin-right: 5em;
+  margin-top: 0.5em;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+
+#flagicon:hover {
+  color: orangered;
+}
+#hearticon:hover {
+  color: red;
+}
 #retweeticon:hover {
-  box-shadow: gold;
+  color: blue;
 }

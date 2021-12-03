@@ -1,17 +1,25 @@
 form {
+    height: 200px;
     border-bottom: black 2px solid;
 }
-#tweet-text {
-    display: flex;
+#newtweet-text {
+    top: 20px;
     width: 90%;
     background-color: inherit;
+    padding: 1.2em;
+    margin: 1.2em;
     color: black;
     border: none;
     resize: none;
     font-family: 'Bungee', 'cursive';
 }
+textarea {
+    position: relative;
+    transform: translateY(-400px);
+}
 button {
     position:relative;
+    transform: translateY(-200px);
     border-radius: 5px;
     margin: 20px;
     background-color: #4056A1;
@@ -19,9 +27,10 @@ button {
     font-family: 'Bungee', 'cursive';
 }
 output.counter {
-    display: flex;
     position: relative;
     float:right;
+    transform: translateY(-230px);
+    top: 20px;
     margin:30px;
     text-align: right;
     font-family: 'Bungee', 'cursive';
