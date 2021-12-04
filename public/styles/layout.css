@@ -1,10 +1,11 @@
 /*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* https://css-tricks.com/international-box-sizing-awareness-day/
+* Do not modify these two selectors, please
+*/
 html {
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,93 +15,49 @@ html {
  * Global layout stuff
  */
 body {
+  margin: 0;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  height:100%;
-  font-family: 'Source Sans Pro', sans-serif;
+  height:auto;
+  flex-direction: column;
   user-select: none;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
-nav {
+body, main.container{
+  width: 100%;
+  min-height: inherit;
+}
+/* nav tag*/
+nav { 
+  width:100%;
+  display: inherit;
   font-family: 'Bungee', 'cursive';
   font-size: xx-large;
 }
-main {
-  position: relative;
+/* Main  Content*/
+main .container{
+  position: absolute;
   top: 520px;
-  width:90%;
+  max-width: 450px;
+  width:100%;
+  position: relative;
+  display: inherit;
   margin: 0 auto;
-  background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
+  padding: 100px 2em 0;
 }
-article {
-  border: 2px solid black;
-  height: 550px;
-  transform: translateY(-220px);
-}
+#navbar, main.container, section.all-tweets header{
+  width:100%;
+  display:inherit;
+ }
 
-article header {
-  background-color: #f4f1ec;
+#navbar, section.all-tweets header{
+  align-items:center;
 }
-article:hover {
-  box-shadow: 5px 10px #888888;
-}
-header #tweeterprofilepic {
-  position: relative;
-  float: left;
-  margin: 15px;
-}
-
-text {
-  position: relative;
-  font-size: 1.5em;
-  float: left ;
-  margin: 1.2em;
-  padding-bottom: 1.2em;
-  text-align: left;
-  width: 95%;
-  border-bottom: 5px solid black;
-  top: 50px;
-}
-
-#tweetername {
-  position: relative;
-  float: left;
-  font-size: 1.5em;
-  margin-top: 70px;
-}
-header #tweeterhandle {
-  position: relative;
-  float: right;
-  margin-right: 40px;
-  margin-top: 75px;
-  opacity: 0.4;
-}
-#timesincetweet {
-  position: relative;
-  float: left;
-  margin-left: 2.5em;
-  margin-top: 1em;
-}
-#icons {
-  float: right;
-  margin-right: 5em;
-  margin-top: 0.5em;
-  padding: 0px 5px;
-  cursor: pointer;
-}
-
-#flagicon:hover {
-  color: orangered;
-}
-#hearticon:hover {
-  color: red;
-}
-#retweeticon:hover {
-  color: blue;
+.all-tweets {
+  /* position: relative; */
+  transform: translateY(350px)!important;
 }

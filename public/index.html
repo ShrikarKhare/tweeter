@@ -18,8 +18,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- New Tweet CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    
+    <link rel="stylesheet" href="/styles/composetweet.css" type="text/css" />
+    <!-- Tweet CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--timeago.js library-->
@@ -32,35 +33,36 @@
   
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id = 'navbar'>
       <span>tweeter</span>
-      <p id = 'newtweet'> 
+      <p id = 'writeanewtweet'> 
         <strong>Write</strong> a new tweet
       </p>
       <i id = doubledownicon class="fa-solid fa-angles-down fa-xs animate-bounce"></i>
     </nav>
     <header>
       <div>
-          <img id = 'profilepic' src="/images/profile-hex.png"> 
+        <img id = 'profilepic' src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2 id = 'name'>Wendy Squareburger</h2>
+        <h2 id = 'name'>Wendy Squareburger</h2>
       </div>
-  </header>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container" id = 'tweets-container'>
+    <main class="container" id = 'tweet-container'>
+      <!-- <h2>Compose Tweet</h2> -->
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-        <form>
-          <textarea  name="text" class = 'textarea' id="newtweet-text" placeholder = "What are you humming about?"></textarea>
-        </form>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-          <button id = 'submitbutton' type="submit">Tweet</button>
+        <div class = 'tweetcard'>
+          <!-- <h2>Compose Tweet</h2> -->
+          <form id = 'composetweet'>
+            <textarea  name="text" class = 'textarea' id="newtweet-text" maxlength = "140" placeholder = "What are you humming about?"></textarea>
+            <button id = 'submitbutton' onClick = "postTweet(event)" type="submit">Tweet</button>  
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </form>
+        </div>
       </section>
+      <section class ='alltweets'></section>
     </main>
   </body>
 </html>
-<!-- <script>
-  document.getElementById('timesincetweet').innerHTML = `${timeago.format(new Date())} `
-</script> -->

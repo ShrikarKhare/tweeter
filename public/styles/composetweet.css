@@ -1,0 +1,63 @@
+section.new-tweet{
+  position: relative;
+  top:520px;
+  margin: 0px 100px;
+  width:90%;
+}
+.tweetcard{
+  flex-direction: column;
+  /* width:100%; */
+  border-radius: 6px;
+  /* border: .5px solid black; */
+}
+
+section.new-tweet{
+  margin-bottom:1.5em;
+  padding-bottom: 1.5em;
+  /* width:100%; */
+  /* border-bottom: 1px solid; */
+}
+
+  
+/* section.new-tweet form [type=submit]{
+  width:40%;
+  background: #fff;
+  border: .2px solid black;
+  height: 25px;
+  border-radius: 3px;
+} */
+  .new-tweet textarea{
+    max-width:100%;
+    min-width:100%;
+    min-height:60px;
+   }
+form {
+  height: 150px;
+  border-bottom: black 2px solid;
+}
+#newtweet-text {
+  width: 90%;
+  background-color: inherit;
+  padding: 1.2em;
+  margin: 1.2em;
+  color: black;
+  border: none;
+  resize: none;
+}
+#submitbutton {
+  position:relative;
+  border-radius: 5px;
+  width: 150px;
+  height:50px;
+  margin: 20px;
+  background-color: #4056A1;
+  color: #fff;  
+  font-family: 'Bungee', 'cursive';
+}
+output.counter {
+  position: relative;
+  float:right;
+  margin:30px;
+  text-align: right;
+  font-family: 'Bungee', 'cursive';
+}

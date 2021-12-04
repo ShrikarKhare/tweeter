@@ -3,70 +3,81 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-]
-const renderTweets = function(tweets) {
-    // loops through tweets
+const loadTweets = () => {
+    $.get('/tweets/', (data) => {
+        return renderTweets(data);
+    })
+}
+const renderTweets = (tweets) => {
+    // loops through all tweets
     for (let i = 0 ; i < tweets.length; i++) {
-        $('#tweets-container').append(createTweetElement(tweets[i]));
+        // calls createTweetElement for each tweet
+        // takes return value and appends it to the tweets container
+        $('.alltweets').prepend(createTweetElement(tweets[i]));
     }
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-  }
- const createTweetElement = (tweetobject) => {
+}
+const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+const createTweetElement = (tweetobject) => {
+    let tweetprofilepic = tweetobject.user.avatars;
+    let username = tweetobject.user.name;
+    let userhandle = tweetobject.user.handle;
+    let tweettext = escape(tweetobject.content.text);
+    let tweettime = tweetobject.created_at;
     let tweets = $(`
-    <article class = tweet-container>
-        <header>
-          <img id = 'tweeterprofilepic' src =${tweetobject.user.avatars}/>
-          <p id = 'tweetername'>${tweetobject.user.name}</p> 
-          <p id = 'tweeterhandle'>${tweetobject.user.handle}</p>
-          <text class = 'tweet-text'> ${tweetobject.content.text} </text>
-        </span>
-        <span id = 'timesincetweet'>${timeago.format(tweetobject.created_at)}</span>
-        <span id = 'icons'>
-          <i id = 'flagicon' class="fas fa-flag"> </i>
-          <i id = 'retweeticon' class="fas fa-retweet"> </i>
-          <i id = 'hearticon' class="fas fa-heart"> </i>
-        </header>
-      </article>
-     `);
+        <article class = tweet-container tweet flex>
+            <header id="tweetheader">
+                <span>
+                    <img id = 'tweeterprofilepic' class = 'user-profilepic' src =${tweetprofilepic}/>
+                </span>
+                <h2 id = 'tweetername'>${username}</h2> 
+                <h2 id = 'tweeterhandle'>${userhandle}</h2>
+            </header>
+            <span class ="tweet-content">
+                <p> ${tweettext} </p>
+            </span>
+            <footer id = 'tweetfooter'>
+                ${timeago.format(tweettime)}
+                <span id = 'icons'>
+                    <i id = 'flagicon' class="fas fa-flag"></i>
+                    <i id = 'retweeticon' class="fas fa-retweet"></i>
+                    <i id = 'hearticon' class="fas fa-heart"></i>
+                </span>
+            </footer>
+        </article>
+    `);
     return tweets
- }
- $(document).ready(function () {
-     renderTweets(data);
- })
-const postTweet = () => {
-    $(function() {
-        const $button = $('#submitbutton');
-        $button.on('click', function (event) {
-            event.preventDefault();
-            $.ajax('/tweets', { method: 'POST' })
-            .then(function (results) {
-            // function to perform 
-                results.serialize();
-            });
+}
+$(document).ready(() => {
+    loadTweets();
+})
+const toggleTweetComposer = () => {
+    $(".new-tweet").slideDown();
+    $('textarea').focus();
+}
+const postTweet = event => {
+    event.preventDefault();
+    let newtweet = $('#newtweet-text').val().length
+    //only post tweets within character limit
+    if(newtweet >  0) { //there is a max character length for text area so no need to check for < 140
+    $.post("/tweets", $('#newtweet-text').serialize(), (data) => {
+            //empty the composer box after successful tweet 
+            //after pushing data to database, run the rendering tweets again to show all tweets
+            $('#newtweet-text').val("")
+            $('.alltweets').val("");
+            loadTweets();
+
+            // $(".new-tweet").slideUp();//toggles back up after submit
+        }).done(function() {
+            $('.new-tweet').find('.counter').text('140');
         });
-    });
-};
+    } else {
+        alert ("Tweet cannot be empty");
+        return
+    }
+}
+$("#doubledownicon").on("click", toggleTweetComposer);
+$('#composetweet').on("submit", postTweet);
