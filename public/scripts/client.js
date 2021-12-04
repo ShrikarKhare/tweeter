@@ -55,7 +55,7 @@ $(document).ready(() => {
     loadTweets();
 })
 const toggleTweetComposer = () => {
-    $(".new-tweet").slideDown();
+    $(".new-tweet").slideToggle();
     $('textarea').focus();
 }
 const postTweet = event => {
