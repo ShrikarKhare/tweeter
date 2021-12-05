@@ -23,14 +23,14 @@ This project was created using HTML, CSS, Sass, JS, jQuery and AJAX front-end sk
 
 This is the Desktop layout of the project (mid tweet)
 
-!["Desktop_view"]('/docs/desktopview_tweeter.PNG)
+!["Desktop_view"]('docs/desktopview_tweeter.PNG)
 
 Responsive Tweets without re-rendering
 
-!["Desktop_view_posted"]('/docs/desktopview_tweeterpost.PNG)
+!["Desktop_view_posted"]('docs/desktopview_tweeterpost.PNG)
 
 Mobile friendly viewing 
 
-!["Mobile_view"]('/docs/mobileview_tweeter.PNG)
+!["Mobile_view"]('docs/mobileview_tweeter.PNG)
 
-!["Mobile_view_load_screen"]('/docs/mobileview_tweeter2.PNG)
+!["Mobile_view_load_screen"]('docs/mobileview_tweeter2.PNG)
