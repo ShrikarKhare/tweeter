@@ -1,83 +1,83 @@
 article {
-    position: relative;
-    top:700px;
-    width: 90%;
-    border: 2px solid black;
-    height: 550px;
-    align-items: center;
-    margin: 20px auto ;
-    /* transform: translateY(20px); */
-    /* font-family: 'Source Sans Pro', 'sans-serif'; */
+  position: relative;
+  top: 700px;
+  width: 90%;
+  border: 2px solid black;
+  height: 550px;
+  align-items: center;
+  margin: 20px auto;
 }
-  
 article #tweetheader {
-    background-color: #f4f1ec;
+  background-color: #f4f1ec;
 }
 article:hover {
-    box-shadow: 5px 10px #888888;
-} 
-#tweeterprofilepic {
-    position: relative;
-    float: left;
-    top:50px;
-    margin: 0 30px;
-}
-#tweetheader {
-    height: 200px;
+  box-shadow: 5px 10px #888888;
 }
 article p {
-    position: relative;
-    font-size: 1.5em;
-    float: left ;
-    /* margin: 1.2em; */
-    margin-left: 30px;
-    padding-bottom: 1.2em;
-    text-align: left;
-    width: 95%;
-    border-bottom: 5px solid black;
-    top: 200px;
+  position: relative;
+  font-size: 1.5em;
+  float: left;
+  margin-left: 30px;
+  padding-bottom: 1.2em;
+  text-align: left;
+  width: 95%;
+  border-bottom: 5px solid black;
+  top: 300px;
+}
+
+#tweeterprofilepic {
+  position: relative;
+  float: left;
+  top: 50px;
+  margin: 0 30px;
+}
+
+#tweetheader {
+  height: 200px;
+  width: 100%;
 }
 
 #tweetername {
-    position: relative;
-    float: left;
-    font-size: 1.5em;
-    margin-top: 70px;
-}
-#tweetheader #tweeterhandle {
-    position: relative;
-    float: right;
-    top:-3px;
-    padding: 0px 5px;
-    margin-right: 40px;
-    margin-top: 75px;
-    opacity: 0.4;
-}
-#tweetfooter {
-    position: relative;
-    width:100%;
-    float: left;
-    margin-left: 43px;
-    margin-top: 5px;
-    top:170px;
-}
-#icons {
-    position: relative;
-    float: right !important;
-    transform: translate(60px, -10px);
-    margin-right: 5em;
-    margin-top: 0.5em;
-    padding: 0px 25px;
-    cursor: pointer;
-}
-  
-#flagicon:hover {
-    color: orangered;
-}
- #hearticon:hover {
-    color: red;
-}
- #retweeticon:hover {
-    color: blue;
+  position: relative;
+  float: left;
+  font-size: 1.5em;
+  margin-top: 70px;
 }
 
+#tweeterhandle {
+  position: relative;
+  float: right;
+  top: -3px;
+  padding: 0px 5px;
+  margin-right: 40px;
+  margin-top: 75px;
+  opacity: 0.4;
+}
+
+#tweetfooter {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-left: 43px;
+  margin-top: 125px;
+  top: 170px;
+}
+
+#icons {
+  position: relative;
+  float: right !important;
+  transform: translate(60px, -10px);
+  margin-right: 5em;
+  margin-top: 0.5em;
+  padding: 0px 25px;
+  cursor: pointer;
+}
+#icons #flagicon:hover {
+  color: orangered;
+}
+#icons #hearticon:hover {
+  color: red;
+}
+#icons #retweeticon:hover {
+  color: blue;
+}

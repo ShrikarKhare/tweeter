@@ -1,0 +1,84 @@
+$tweetheaderbgcolor: #f4f1ec;
+article {
+    position: relative;
+    top: 700px;
+    width: 90%;
+    border: 2px solid black;
+    height: 550px;
+    align-items: center;
+    margin: 20px auto ;
+    
+    #tweetheader {
+        background-color: $tweetheaderbgcolor;
+    }
+    &:hover {
+        box-shadow: 5px 10px #888888;
+    }
+    p {
+        position: relative;
+        font-size: 1.5em;
+        float: left ;
+        margin-left: 30px;
+        padding-bottom: 1.2em;
+        text-align: left;
+        width: 95%;
+        border-bottom: 5px solid black;
+        top: 300px;
+    }
+}
+   
+#tweeterprofilepic {
+    position: relative;
+    float: left;
+    top: 50px;
+    margin: 0 30px;
+}
+#tweetheader {
+    height: 200px;
+    width: 100%;
+}
+
+#tweetername {
+    position: relative;
+    float: left;
+    font-size: 1.5em;
+    margin-top: 70px;
+}
+#tweeterhandle {
+    position: relative;
+    float: right;
+    top: -3px;
+    padding: 0px 5px;
+    margin-right: 40px;
+    margin-top: 75px;
+    opacity: 0.4;
+}
+#tweetfooter {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-left: 43px;
+    margin-top: 125px;
+    top: 170px;
+}
+#icons {
+    position: relative;
+    float: right !important;
+    transform: translate(60px, -10px);
+    margin-right: 5em;
+    margin-top: 0.5em;
+    padding: 0px 25px;
+    cursor: pointer;
+    
+    #flagicon:hover {
+        color: orangered;
+    }
+     #hearticon:hover {
+        color: red;
+    }
+     #retweeticon:hover {
+        color: blue;
+    }
+}
+  
+

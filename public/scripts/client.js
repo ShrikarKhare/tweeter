@@ -76,7 +76,7 @@ const postTweet = event => {
         });
     } else {
         alert ("Tweet cannot be empty");
-        return
+        return;
     }
 }
 $("#doubledownicon").on("click", toggleTweetComposer);

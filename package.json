@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
+    "sass": "sass sass:public/styles --watch --poll --no-source-map",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
   "author": "Lighthouse Labs",
@@ -15,9 +16,11 @@
     "chance": "^1.0.2",
     "express": "^4.13.4",
     "md5": "^2.1.0",
+    "sass": "^1.44.0",
     "timeago.js": "^4.0.2"
   },
   "devDependencies": {
+    "eslint": "^8.4.0",
     "nodemon": "^1.9.2"
   }
 }

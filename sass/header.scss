@@ -1,3 +1,6 @@
+@mixin vertalign {
+  vertical-align: auto;
+}
 header {
   position: absolute;
   top: 120px;
@@ -9,15 +12,13 @@ header {
   background-color: goldenrod;
   z-index: 0;
   text-align: center;
-  background-image: url("../images/asfalt-light.png");
+  background-image: url('../images/asfalt-light.png');
 }
-
 #profilepic {
-  vertical-align: auto;
+  @include vertalign;
 }
-
-@media (min-width: 1024px) {
-  header {
-    width: 50%;
+@media (min-width:1024px) {
+    header  {
+      width: 50%;     
+    } 
   }
-}

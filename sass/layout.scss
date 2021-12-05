@@ -5,9 +5,8 @@
 */
 html {
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -28,21 +27,19 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-body, main.container {
+body, main.container{
   width: 100%;
   min-height: inherit;
 }
-
 /* nav tag*/
-nav {
+nav { 
   width: 100%;
   position: fixed;
-  font-family: "Bungee", "cursive";
+  font-family: 'Bungee', 'cursive';
   font-size: xx-large;
 }
-
 /* Main  Content*/
-main .container {
+main .container{
   position: absolute;
   top: 520px;
   max-width: 450px;
@@ -52,17 +49,14 @@ main .container {
   margin: 0 auto;
   padding: 100px 2em 0;
 }
-
-#navbar, main.container, section.all-tweets header {
+#navbar, main.container, section.all-tweets header{
   width: 100%;
   display: inherit;
-}
+ }
 
-#navbar, section.all-tweets header {
+#navbar, section.all-tweets header{
   align-items: center;
 }
-
 .all-tweets {
-  /* position: relative; */
-  transform: translateY(350px) !important;
+  transform: translateY(350px)!important;
 }
