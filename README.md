@@ -21,16 +21,17 @@ This project was created using HTML, CSS, Sass, JS, jQuery and AJAX front-end sk
 - Sass 1.44.0 or above (included in packageJSON)
 - timeago.js 4.0.2 (included in packageJSON)
 
-This is the Desktop layout of the project (mid tweet)
+## This is the Desktop layout of the project (mid tweet)
 
-!["Desktop_view"]('docs/desktopview_tweeter.PNG)
+!["Desktop_view"](docs/desktopview_tweeter.PNG)
 
-Responsive Tweets without re-rendering
+## Responsive Tweets without re-rendering
 
 !["Desktop_view_posted"]('docs/desktopview_tweeterpost.PNG)
 
-Mobile friendly viewing 
+## Mobile friendly viewing 
 
 !["Mobile_view"]('docs/mobileview_tweeter.PNG)
 
+## Mobile load screen
 !["Mobile_view_load_screen"]('docs/mobileview_tweeter2.PNG)
