@@ -63,14 +63,13 @@ const postTweet = event => {
     let newtweet = $('#newtweet-text').val().length
     //only post tweets within character limit
     if(newtweet >  0) { //there is a max character length for text area so no need to check for < 140
-    $.post("/tweets", $('#newtweet-text').serialize(), (data) => {
+        $.post("/tweets", $('#newtweet-text').serialize(), (data) => {
             //empty the composer box after successful tweet 
             //after pushing data to database, run the rendering tweets again to show all tweets
             $('#newtweet-text').val("")
             $('.alltweets').val("");
             loadTweets();
-
-            // $(".new-tweet").slideUp();//toggles back up after submit
+            
         }).done(function() {
             $('.new-tweet').find('.counter').text('140');
         });
